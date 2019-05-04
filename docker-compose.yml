@@ -6,14 +6,10 @@ volumes:
 
 services:
   pihole:
-    image: pihole/pihole:latest
+    build: ./pihole
     privileged: true
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "67:67/udp"
-      - "80:80/tcp"
-      - "443:443/tcp"
+      - 80:80
     volumes:
        - volume_pihole:/etc/pihole/
        - volume_dnsmasq:/etc/dnsmasq.d/
