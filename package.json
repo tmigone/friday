@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git push balena master"
+    "balena:register": "git remote add balena g_tomas_migone@git.balena-cloud.com:g_tomas_migone/friday.git",
+    "balena:deploy": "git push balena master"
   },
   "repository": {
     "type": "git",

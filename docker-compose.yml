@@ -1,5 +1,9 @@
 version: "2"
 
+volumes:
+  volume_pihole:
+  volume_dnsmasq:
+
 services:
   pihole:
     image: pihole/pihole:latest
@@ -10,8 +14,8 @@ services:
       - "80:80/tcp"
       - "443:443/tcp"
     volumes:
-       - './etc-pihole/:/etc/pihole/'
-       - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
+       - volume_pihole:/etc/pihole/
+       - volume_dnsmasq:/etc/dnsmasq.d/
     dns:
       - 127.0.0.1
       - 1.1.1.1
