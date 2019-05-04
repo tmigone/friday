@@ -8,8 +8,6 @@ services:
   pihole:
     build: ./pihole
     privileged: true
-    ports:
-      - 80:80
     volumes:
        - volume_pihole:/etc/pihole/
        - volume_dnsmasq:/etc/dnsmasq.d/
