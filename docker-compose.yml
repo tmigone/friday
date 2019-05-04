@@ -8,6 +8,12 @@ services:
   pihole:
     build: ./pihole
     privileged: true
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "80:80/tcp"
+      - "443:443/tcp"
     volumes:
        - volume_pihole:/etc/pihole/
        - volume_dnsmasq:/etc/dnsmasq.d/
@@ -16,5 +22,4 @@ services:
       - 1.1.1.1
     cap_add:
       - NET_ADMIN
-    network_mode: host
-    restart: unless-stopped
+    # network_mode: host
