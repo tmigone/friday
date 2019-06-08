@@ -1,0 +1,9 @@
+version: '2'
+
+volumes:
+  volume_homeassistant:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/tomi/Documents/git/friday/homeassistant

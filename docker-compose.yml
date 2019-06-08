@@ -1,10 +1,12 @@
-version: "2"
+version: '2'
 
 volumes:
   volume_pihole:
   volume_dnsmasq:
+  volume_homeassistant:
 
 services:
+
   pihole:
     build: ./pihole
     privileged: true
@@ -17,3 +19,12 @@ services:
     cap_add:
       - NET_ADMIN
     network_mode: host
+
+  homeassistant:
+    build: ./homeassistant
+    privileged: true
+    volumes:
+      - volume_homeassistant:/config
+    restart: always
+    ports: 
+      - 8123:8123
