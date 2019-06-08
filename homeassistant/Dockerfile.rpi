@@ -1,0 +1,7 @@
+# FROM homeassistant/home-assistant
+FROM homeassistant/raspberrypi3-homeassistant
+LABEL author "Tomás Migone"
+LABEL maintainer "tomasmigone@gmail.com"
+
+# Copy configuration
+COPY . /config
