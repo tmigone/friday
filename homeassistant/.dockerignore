@@ -1,1 +1,13 @@
 Dockerfile*
+
+# Whitelist files
+!.storage
+!.cloud
+!.google.token
+
+!secrets.yaml
+!known_devices.yaml
+
+!home-assistant_v2.db
+!home-assistant_v2.db-wal
+!home-assistant_v2.db-shm
