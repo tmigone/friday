@@ -1,7 +1,12 @@
-# FROM homeassistant/home-assistant
 FROM homeassistant/raspberrypi3-homeassistant
 LABEL author "Tomás Migone"
 LABEL maintainer "tomasmigone@gmail.com"
 
 # Copy configuration
 COPY . /config
+COPY .storage /config/.storage
+COPY .cloud /config/.cloud
+COPY secrets.yaml /config/secrets.yaml
+COPY known_devices.yaml /config/known_devices.yaml
+COPY known_devices.yaml /config/known_devices.yaml
+COPY home-assistant_v2.db /config/home-assistant_v2.db

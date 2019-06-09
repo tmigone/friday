@@ -3,8 +3,9 @@ Assortment of useful stuff running on my home Raspberry Pi.
 
 Deployed and managed using [balenaCloud](https://www.balena.io/cloud)
 
-Services:
-- pihole
+Services (so far):
+- [pihole]()
+- [homeassistant]()
   
 
 ## PiHole
