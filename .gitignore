@@ -1,17 +1,1 @@
 node_modules
-# Ignore folders.
-.storage
-.cloud
-.google.token
-
-# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
-secrets.yaml
-known_devices.yaml
-
-# Ignore database files
-home-assistant_v2.db
-home-assistant_v2.db-wal
-home-assistant_v2.db-shm
-
-# Ignore logfiles
-*.log

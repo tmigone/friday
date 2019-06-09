@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "balena:register": "git remote add balena g_tomas_migone@git.balena-cloud.com:g_tomas_migone/friday.git",
-    "balena:deploy": "git push balena master",
+    "balena:deploy": "scripts/balena-deploy.sh",
     "build:dev": "docker-compose -f docker-compose.yml -f docker-compose.development.yml build",
     "up": "docker-compose -f docker-compose.yml -f docker-compose.development.yml up"
   },
