@@ -1,0 +1,36 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: America/Argentina/Buenos_Aires
+  auth_providers:
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.1.0/24
+        - 127.0.0.1
+        - ::1
+      allow_bypass_login: true
+    - type: homeassistant
+    
+default_config:
+
+discovery:
+  ignore:
+    - philips_hue
+
+hue:
+  bridges:
+    - host: !secret hue_ip
+      filename: phue.conf
+      allow_unreachable: true
+      allow_hue_groups: false
+
+# General system entities
+zone: !include zones.yaml
+person: !include persons.yaml
+device_tracker: !include device_trackers.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

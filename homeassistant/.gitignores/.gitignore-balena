@@ -1,4 +1,10 @@
+# Ignore folders.
+.storage
+.cloud
+.google.token
+
 # Ignore database files
+home-assistant_v2.db
 home-assistant_v2.db-wal
 home-assistant_v2.db-shm
 

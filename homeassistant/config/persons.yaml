@@ -1,0 +1,9 @@
+- name: Tomi
+  id: tomi
+  device_trackers:
+    - device_tracker.pixel_xl
+    - device_tracker.jarvis
+- name: Luchi
+  id: luchi
+  device_trackers:
+    - device_tracker.luchis_iphone

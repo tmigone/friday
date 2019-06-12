@@ -3,7 +3,7 @@
 rm homeassistant/.gitignore
 cp homeassistant/.gitignores/.gitignore-balena homeassistant/.gitignore
 
-git push balena master
+balena push friday
 
 rm homeassistant/.gitignore
 cp homeassistant/.gitignores/.gitignore-full homeassistant/.gitignore

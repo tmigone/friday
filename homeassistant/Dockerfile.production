@@ -1,0 +1,9 @@
+FROM homeassistant/raspberrypi3-homeassistant
+LABEL author "Tomás Migone"
+LABEL maintainer "tomasmigone@gmail.com"
+
+# Copy new configuration to imported folder
+COPY config /imported
+
+# Override volume configuration with imported on runtime
+CMD cp /imported/*.yaml /config && python -m homeassistant --config /config

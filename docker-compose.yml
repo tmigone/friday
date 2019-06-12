@@ -7,25 +7,23 @@ volumes:
 
 services:
 
-  pihole:
-    build: ./pihole
-    privileged: true
-    volumes:
-       - volume_pihole:/etc/pihole/
-       - volume_dnsmasq:/etc/dnsmasq.d/
-    dns:
-      - 127.0.0.1
-      - 1.1.1.1
-    cap_add:
-      - NET_ADMIN
-    network_mode: host
+  # pihole:
+  #   build: ./pihole
+  #   privileged: true
+  #   volumes:
+  #      - volume_pihole:/etc/pihole/
+  #      - volume_dnsmasq:/etc/dnsmasq.d/
+  #   dns:
+  #     - 127.0.0.1
+  #     - 1.1.1.1
+  #   cap_add:
+  #     - NET_ADMIN
+  #   network_mode: host
 
   homeassistant:
     build: 
       context: ./homeassistant
-      dockerfile: Dockerfile.rpi
-    environment:
-      - TZ=America/Argentina/Buenos_Aires
+      dockerfile: Dockerfile.production
     volumes:
       - volume_homeassistant:/config
     privileged: true

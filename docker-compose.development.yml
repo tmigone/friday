@@ -6,9 +6,9 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /Users/tomi/Documents/git/friday/homeassistant
+      device: /Users/tomi/Documents/git/friday/homeassistant/config
 
 services:
   homeassistant:
     build: 
-      dockerfile: Dockerfile.x86
+      dockerfile: Dockerfile.development
