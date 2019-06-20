@@ -1,1 +1,20 @@
 node_modules
+
+### Home Assistant 
+# Storage
+.storage
+.cloud
+.google.token
+
+# Database files
+home-assistant_v2.db
+home-assistant_v2.db-wal
+home-assistant_v2.db-shm
+
+# Logfiles
+*.log
+
+# Secrets and personal information
+secrets.yaml
+known_devices.yaml
+phue.conf

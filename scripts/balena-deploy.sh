@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-rm homeassistant/.gitignore
-cp homeassistant/.gitignores/.gitignore-balena homeassistant/.gitignore
+# Whitelist secret stuff
+echo "!secrets.yaml" | tee homeassistant/config/.gitignore
+echo "!known_devices.yaml" | tee -a homeassistant/config/.gitignore
+echo "!phue.conf" | tee -a homeassistant/config/.gitignore
 
+# Push balena
 balena push friday
 
-rm homeassistant/.gitignore
-cp homeassistant/.gitignores/.gitignore-full homeassistant/.gitignore
+# Delete whitelist to avoid accidentally adding secrets to git
+rm homeassistant/config/.gitignore
