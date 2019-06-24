@@ -9,6 +9,10 @@ volumes:
       device: /Users/tomi/Documents/git/friday/homeassistant/config
 
 services:
+
+  pihole:
+    entrypoint: ["echo", "PiHole service disabled for development environment."]
+
   homeassistant:
     build: 
       dockerfile: Dockerfile.development

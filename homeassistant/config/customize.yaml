@@ -1,0 +1,19 @@
+# People
+person.tomi:
+  entity_picture: /local/tomi.jpg
+
+person.luchi:
+  entity_picture: /local/luchi.jpeg
+
+# Automations
+automation.family_home_lights_on:
+  friendly_name: Family home > Lights on
+  icon: mdi:home-account
+
+automation.family_away_lights_off:
+  friendly_name: Family away > Lights off
+  icon: mdi:home
+
+automation.sunset_lights_on:
+  friendly_name: Sunset > Lights on
+  icon: mdi:weather-sunset

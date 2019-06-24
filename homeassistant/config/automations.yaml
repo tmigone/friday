@@ -1,23 +1,50 @@
-# - id: home_lights_on
-#   alias: Home > Lights On
-#   trigger:
-#     platform: state
-#     entity_id: person.tomi
-#     from: not_home
-#     to: home
-#   condition: []
-#   action:
-#     service: light.turn_on
-#     entity_id: light.living_room
+####################################################
+#                  Family home                     #
+####################################################
+- alias: family_home_lights_on
+  trigger:
+    platform: state
+    entity_id: group.family
+    from: not_home
+    to: home
+  condition: 
+    condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+    service: light.turn_on
+    entity_id: light.living_room
+    data:
+      brightness_pct: 100
 
-# - id: home_lights_off
-#   alias: Home > Lights Off
-#   trigger:
-#     platform: state
-#     entity_id: person.tomi
-#     from: home
-#     to: not_home
-#   condition: []
-#   action:
-#     service: light.turn_off
-#     entity_id: light.living_room
+####################################################
+#                 Family away                      #
+####################################################
+- alias: family_away_lights_off
+  trigger:
+    platform: state
+    entity_id: group.family
+    from: home
+    to: not_home
+  action:
+    service: light.turn_off
+    entity_id: group.all_lights
+
+
+####################################################
+#                   Sunset                         #
+####################################################
+- alias: sunset_lights_on
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:15:00"
+  condition:
+    condition: state
+    entity_id: group.family
+    state: home
+  action:
+    service: light.turn_on
+    entity_id: light.living_room
+    data:
+      brightness_pct: 100

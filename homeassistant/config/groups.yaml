@@ -1,0 +1,6 @@
+family:
+  name: Family
+  icon: mdi:home-heart
+  entities:
+    - person.tomi
+    - person.luchi

@@ -8,7 +8,8 @@
     "balena:deploy": "chmod +x scripts/balena-deploy.sh && scripts/balena-deploy.sh",
     "build": "docker-compose -f docker-compose.yml -f docker-compose.development.yml build",
     "up": "docker-compose -f docker-compose.yml -f docker-compose.development.yml up",
-    "down": "docker-compose -f docker-compose.yml -f docker-compose.development.yml down"
+    "down": "docker-compose -f docker-compose.yml -f docker-compose.development.yml down",
+    "dev": "npm run down && npm run up"
   },
   "repository": {
     "type": "git",
