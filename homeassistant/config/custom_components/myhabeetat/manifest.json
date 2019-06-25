@@ -1,0 +1,10 @@
+{
+  "domain": "myhabeetat",
+  "name": "MyHabeetat",
+  "documentation": "https://github.com/tomasmigone/friday/tree/master/homeassistant/config/custom_components/myhabeetat",
+  "dependencies": [],
+  "codeowners": [
+    "@tomasmigone"
+  ],
+  "requirements": []
+}

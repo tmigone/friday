@@ -1,4 +1,6 @@
+# Libs
 node_modules
+__pycache__
 
 ### Home Assistant 
 # Storage

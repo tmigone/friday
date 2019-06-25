@@ -1,0 +1,3 @@
+"""
+MyHabeetat component.
+"""
