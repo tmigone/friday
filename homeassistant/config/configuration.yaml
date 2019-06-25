@@ -15,6 +15,9 @@ homeassistant:
       allow_bypass_login: true
     - type: homeassistant
     
+logger:
+  default: warn
+
 default_config:
 
 discovery:
@@ -27,6 +30,12 @@ hue:
       filename: phue.conf
       allow_unreachable: true
       allow_hue_groups: false
+
+climate:
+  - platform: myhabeetat
+    home_id: !secret myhabeetat_home_id
+    email: !secret myhabeetat_email
+    password: !secret myhabeetat_password
 
 # General system entities
 zone: !include zones.yaml

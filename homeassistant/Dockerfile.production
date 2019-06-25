@@ -6,4 +6,4 @@ LABEL maintainer "tomasmigone@gmail.com"
 COPY config /imported
 
 # Override volume configuration with imported on runtime
-CMD cp /imported/*.yaml /config && python -m homeassistant --config /config
+CMD cp -a /imported/. /config && python -m homeassistant --config /config
