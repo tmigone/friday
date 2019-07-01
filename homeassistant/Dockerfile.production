@@ -1,4 +1,4 @@
-FROM homeassistant/raspberrypi3-homeassistant
+FROM homeassistant/raspberrypi3-homeassistant:0.95.1
 LABEL author "Tomás Migone"
 LABEL maintainer "tomasmigone@gmail.com"
 

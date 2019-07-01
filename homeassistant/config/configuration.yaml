@@ -14,11 +14,14 @@ homeassistant:
         - ::1
       allow_bypass_login: true
     - type: homeassistant
-    
-logger:
-  default: warn
 
 default_config:
+
+sensor:
+  - platform: version
+
+logger:
+  default: warn
 
 discovery:
   ignore:
