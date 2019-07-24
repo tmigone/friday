@@ -11,8 +11,11 @@ _LOGGER = logging.getLogger(__name__)
 DOMAIN = 'myhabeetat'
 DEPENDENCIES = []
 
-
-BASE_URL = 'https://myhabeetat-api.now.sh/api'
+# API vs library
+# The package I wrote to handle myhabeetat's API is written in nodejs.
+# To avoid rewriting it with python for HA, let's use a local web API
+# Old API was hosted with now.sh --> BASE_URL = 'https://myhabeetat-api.now.sh/api'
+BASE_URL = 'http://myhabeetat:8080'
 
 # Config validation
 CONF_EMAIL = 'email'
