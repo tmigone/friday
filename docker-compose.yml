@@ -30,3 +30,14 @@ services:
     restart: always
     ports: 
       - 8123:8123
+    depends_on:
+      - myhabeetat
+      - pihole
+
+  myhabeetat:
+    build: 
+      context: ./myhabeetat
+      dockerfile: Dockerfile.production
+    restart: always
+    ports:
+      - 8080:8080

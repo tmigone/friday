@@ -16,3 +16,7 @@ services:
   homeassistant:
     build: 
       dockerfile: Dockerfile.development
+
+  myhabeetat:
+    build: 
+      dockerfile: Dockerfile.development
