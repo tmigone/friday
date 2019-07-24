@@ -1,0 +1,12 @@
+FROM balenalib/raspberrypi3-alpine-node:11-run
+LABEL author "Tomás Migone"
+LABEL maintainer "tomasmigone@gmail.com"
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+CMD [ "node", "server.js" ]

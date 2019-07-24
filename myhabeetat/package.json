@@ -1,0 +1,16 @@
+{
+  "name": "myhabeetat-ha",
+  "version": "1.0.0",
+  "description": "MyHabeetat web API for HomeAssistant. Because I'm lazy and don't want to rewrite the package with python.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tomás Migone <tomasmigone@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "myhabeetat": "^1.3.2"
+  }
+}

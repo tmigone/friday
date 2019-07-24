@@ -1,0 +1,12 @@
+FROM node:11-alpine
+LABEL author "Tomás Migone"
+LABEL maintainer "tomasmigone@gmail.com"
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+CMD [ "node", "server.js" ]
