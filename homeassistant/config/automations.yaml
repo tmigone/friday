@@ -27,8 +27,12 @@
     from: home
     to: not_home
   action:
-    service: light.turn_off
-    entity_id: group.all_lights
+    - service: light.turn_off
+      entity_id: group.all_lights
+    - service: climate.set_operation_mode
+      entity_id: group.all_climate_devices
+      data:
+        operation_mode: idle
 
 
 ####################################################

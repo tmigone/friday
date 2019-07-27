@@ -4,3 +4,9 @@ family:
   entities:
     - person.tomi
     - person.luchi
+all_climate_devices:
+  name: Climate devices
+  icon: mdi:home
+  entities:
+    - climate.bedroom
+    - climate.living_room
