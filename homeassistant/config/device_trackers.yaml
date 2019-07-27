@@ -1,7 +1,6 @@
-  - platform: tomato
-    host: !secret tomato_host
-    username: !secret tomato_username
-    password: !secret tomato_password
-    http_id: !secret tomato_http_id
+  - platform: mikrotik
+    host: !secret mikrotik_host
+    username: !secret mikrotik_username
+    password: !secret mikrotik_password
     new_device_defaults:
       track_new_devices: false
