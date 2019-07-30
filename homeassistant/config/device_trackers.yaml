@@ -2,6 +2,6 @@
     host: !secret mikrotik_host
     username: !secret mikrotik_username
     password: !secret mikrotik_password
-    consider_home: 360
+    consider_home: 480
     new_device_defaults:
       track_new_devices: false
