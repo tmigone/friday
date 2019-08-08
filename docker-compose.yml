@@ -13,12 +13,15 @@ services:
     volumes:
        - volume_pihole:/etc/pihole/
        - volume_dnsmasq:/etc/dnsmasq.d/
+    environment:
+      WEB_PORT: 8089
     dns:
       - 127.0.0.1
       - 1.1.1.1
     cap_add:
       - NET_ADMIN
     network_mode: host
+    restart: unless-stopped
 
   homeassistant:
     build: 
