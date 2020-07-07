@@ -1,4 +1,4 @@
-FROM pihole/pihole:4.3.1-4_armhf
+FROM pihole/pihole:v5.0-armhf
 LABEL author "Tomás Migone"
 LABEL maintainer "tomasmigone@gmail.com"
 
